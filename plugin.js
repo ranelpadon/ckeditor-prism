@@ -37,27 +37,69 @@
           });
         },
 
-        // @todo: Streamline the supported language list.
-        // See the declaration style of GeSHi Snippet Plugin.
-        // Download the equivalent streamlined prism.js also.
+        // Specify the supported languages.
         languages: {
-          apache: 'Apache',
+          abap: 'ABAP',
+          actionscript: 'ActionScript',
+          apacheconf: 'Apache Conf',
+          applescript: 'AppleScript',
+          aspnet: 'ASP.NET',
           bash: 'Bash',
+          basic: 'BASIC',
+          c: 'C',
           coffeescript: 'CoffeeScript',
           cpp: 'C++',
-          cs: 'C#',
+          csharp: 'C#',
           css: 'CSS',
+          d: 'D',
+          dart: 'Dart',
           diff: 'Diff',
-          html: 'HTML',
+          docker: 'Docker',
+          erlang: 'Erlang',
+          fortran: 'Fortran',
+          fsharp: 'F#',
+          git: 'Git',
+          go: 'Go',
+          groovy: 'Groovy',
+          haskell: 'Haskell',
+          markup: 'HTML',
           http: 'HTTP',
           ini: 'INI',
           java: 'Java',
           javascript: 'JavaScript',
+          lua: 'Lua',
+          makefile: 'Makefile',
+          markdown: 'Markdown',
+          matlab: 'MATLAB',
+          nginx: 'Nginx',
+          objectivec: 'Objective-C',
+          pascal: 'Pascal',
+          perl: 'Perl',
+          php: 'PHP',
+          prolog: 'Prolog',
+          python: 'Python',
+          puppet: 'Puppet',
+          r: 'R',
+          ruby: 'Ruby',
+          rust: 'Rust',
+          sas: 'SAS',
+          scala: 'Scala',
+          scheme: 'Scheme',
+          sql: 'SQL',
+          markup: 'SVG',
+          swift: 'Swift',
+          twig: 'Twig',
+          vim: 'vim',
+          markup: 'XML',
+          yaml: 'YAML',
         },
 
         highlighter: function(code, language, callback) {
+          // _self.Prism is a global namespace/object created by Prism.js.
+          var _prism = _self.Prism;
+
           // Let the Prism.js highlight the code.
-          var highlightedCode = _self.Prism.highlight(code, _self.Prism.languages[language], language);
+          var highlightedCode = _prism.highlight(code, _prism.languages[language], language);
 
           // The clever idea below is taken from the 'Line Numbers' plugin
           // of Prism. Basically, we want to count the number of newlines (\n)
