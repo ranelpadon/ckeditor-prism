@@ -1,7 +1,7 @@
 ckeditor-prism
 ================
 <strong>OVERVIEW</strong>:<br>
-<a href="http://ckeditor.com/addon/prism">Prism Highlighter</a> is a plugin for <a href="http://ckeditor.com">CKEditor</a> for inserting beautiful formatted text, markdown, or code snippets in your blog or website. Prism is the chosen renderer/highlighter/colorizer since it's pretty, lightweight, and extendable.
+<a href="http://ckeditor.com/addon/prism">Prism Highlighter</a> is a plugin for <a href="http://ckeditor.com">CKEditor</a> for inserting beautiful formatted text, markdown, or code snippets in your blog or website. Prism is the chosen renderer/highlighter/colorizer since it's pretty, lightweight, and extendable. I also use this plugin in my [personal website](http://www.ranelpadon.com/content/practical-regex-part-12-common-operators).
 
 This plugin utilizes the following libraries: <br>
 <ul>
@@ -13,16 +13,16 @@ This plugin utilizes the following libraries: <br>
 
 By default, Prism has no line numbering mechanism, so the **Line Number** add-on has been added. Also, in order for the line numbers to work smoothly in CKEditor and when rendering the actual page, I did some minor patching in **prism.js** and **prism.css**.
 
-<strong>LIVE DEMO PAGE</strong>:
+<strong>LIVE DEMO PAGE</strong>:<br>
 Demo page could be found <a href="#">here</a>.
 
-<strong>INSTALLATION</strong>:
+<strong>INSTALLATION</strong>:<br>
 Kindly refer to <a href="#">Installation Guide</a>.
 
-<strong>HOW TO USE</strong>:
+<strong>HOW TO USE</strong>:<br>
 Kindly refer to <a href="#">How to Create and Edit Prism Snippets</a>.
 
-<strong>LICENSE and CREDITS</strong>:
+<strong>LICENSE and CREDITS</strong>:<br>
 License: <a href="https://www.gnu.org/licenses/lgpl-2.1.txt">LGPLv2.1</a> or later should apply. Note that LGPLv2.1+ is also compatible with <a href="https://www.drupal.org/node/1475972#gplv2-compatible-licenses">GPLv2</a>.<br>
 Copyright 2015 by Engr. Ranel O. Padon<br>
 ranel.padon@gmail.com<br>
