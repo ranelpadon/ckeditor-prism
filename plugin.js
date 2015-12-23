@@ -24,14 +24,14 @@
       // Method is available only if wysiwygarea exists and
       // CKEditor is at least version 4.4.
       if (editor.addContentsCss) {
-        editor.addContentsCss(path + 'lib/prism/prism_patched.css');
+        editor.addContentsCss(path + 'lib/prism/prism_patched.min.css');
       }
 
       // Create a new instance of the highlighter.
       var prismHighlighter = new CKEDITOR.plugins.codesnippet.highlighter({
         init: function(ready) {
           // Load the Prism.js library asynchronously.
-          CKEDITOR.scriptLoader.load(path + 'lib/prism/prism_patched.js', function() {
+          CKEDITOR.scriptLoader.load(path + 'lib/prism/prism_patched.min.js', function() {
             // Notify the handler that the library has been loaded.
             ready();
           });
