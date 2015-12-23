@@ -19,9 +19,11 @@
     init: function(editor) {
       var path = this.path;
 
-      // Method is available only if wysiwygarea exists.
-      // @todo: Make sure that CSS loading is stable.
-      if (editor.addContentsCss ) {
+      // Loading the prism.js style file.
+      // Idea taken from codesnippet/plugin.js code.
+      // Method is available only if wysiwygarea exists and
+      // CKEditor is at least version 4.4.
+      if (editor.addContentsCss) {
         editor.addContentsCss(path + 'lib/prism/prism_patched.css');
       }
 
@@ -57,16 +59,22 @@
           // Let the Prism.js highlight the code.
           var highlightedCode = _self.Prism.highlight(code, _self.Prism.languages[language], language);
 
+          // The clever idea below is taken from the 'Line Numbers' plugin
+          // of Prism. Basically, we want to count the number of newlines (\n)
+          // in the highlighted code, then create the same number
+          // of SPAN elements, append them to the highlighted code
+          // and finally number/label them using prism.css.
           var match = highlightedCode.match(/\n(?!$)/g);
           var linesNum = match ? match.length + 1 : 1;
 
           var lines = new Array(linesNum + 1);
           lines = lines.join('<span></span>');
 
+          // Create the SPAN root/wrapper, insert its child SPAN lines,
+          // then append them to the highlighted code.
           var lineNumbersWrapper = '<span class="line-numbers-rows">';
-
           lineNumbersWrapper += lines;
-
+          lineNumbersWrapper += '</span>';
           highlightedCode += lineNumbersWrapper;
 
           // Return highlighted code.
