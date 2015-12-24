@@ -1,6 +1,12 @@
 I. OVERVIEW
 
-This Prism Highlighter plugin requires CKEditor 4.4 or later versions, and it extends the Code Snippet widget/plugin. It requires CKEditor 4.4 since the Code Snippet's mechanism for extending/overriding the highlighting engine is only available starting from that version. Hence, the Code Snippet plugin is also a hard dependency (which also depends on Widget and Line Utilities). In essence, we need to download these plugins:
+This Prism Highlighter plugin requires CKEditor 4.4 or later versions, and it extends
+the Code Snippet widget/plugin. It requires CKEditor 4.4 since the Code Snippet's mechanism
+for extending/overriding the highlighting engine is only available starting from that version.
+Hence, the Code Snippet plugin is also a hard dependency
+(which also depends on Widget and Line Utilities).
+
+In essence, we need to download these plugins:
 a. Widget (http://ckeditor.com/addon/widget)
 b. Line Utilities (http://ckeditor.com/addon/lineutils)
 c. Code Snippet (http://ckeditor.com/addon/codesnippet),
@@ -8,13 +14,15 @@ d. Prism Highlighter plugin (http://ckeditor.com/addon/prism).
 
 For Linux users, after downloading, make sure that the zipped folders or the target CKEditor folders
 have right read/write/execute permissions, otherwise you might encounter loading issues
-like the "File x could not be found" notice. You might need to run "sudo chmod 777 -R lineutils", "sudo chmod 777 -R widget", "sudo chmod 777 -R codesnippet", and "sudo chmod 777 -R prismhighlighter", before or after copying them
-in the appropriate CKEditor folders.
+like the "File x could not be found" notice. You might need to run "sudo chmod 777 -R lineutils",
+"sudo chmod 777 -R widget", "sudo chmod 777 -R codesnippet", and "sudo chmod 777 -R prismhighlighter",
+before or after copying them in the appropriate CKEditor folders.
 
 
 II. STANDARD INSTALLATION (Usual Setup)
 
-1) After unzipping the folder, paste the 4 folders ("lineutils", "widget", "codesnippet", and "prismhighlighter")
+1) After unzipping the folder, paste the 4 folders
+    ("lineutils", "widget", "codesnippet", and "prismhighlighter")
     to "ckeditor/plugins" folder. After that, you should have the following folder structures:
         "ckeditor/plugins/lineutils"
         "ckeditor/plugins/widget"
@@ -54,7 +62,12 @@ as the "Full" CKEditor.js build if you check in the the CKEditor Global Profile 
     "admin/config/content/ckeditor/editg"
         Path to CKEditor: //cdn.ckeditor.com/4.4.3/full-all
 
-the path is pointing to the CDN copy/build of CKEditor 4.4.3 with Full Plugins, so the Widget and Lineutils plugins should not be downloaded anymore, including the Code Snippet (but Code Snippet must still be activated in the Drupal's CKEditor Configuration page since it's not activated by default); actually, conflicts and console error like this will show if you try to still download and integrate them into the setup:
+the path is pointing to the CDN copy/build of CKEditor 4.4.3 with Full Plugins,
+so the Widget and Lineutils plugins should not be downloaded anymore,
+including the Code Snippet (but Code Snippet must still be activated in
+the Drupal's CKEditor Configuration page since it's not activated by default);
+actually, conflicts and console error like this will show if you try to still download
+and integrate them into the setup:
     Uncaught TypeError: CKEDITOR.tools.getIndex is not a function
 
 Hence, it is highly recommended that you use the latest Drupal CKEditor module
