@@ -1,15 +1,15 @@
 CKEditor Prism Highlighter Plugin
 
 
-I. CREATING NEW CODE SNIPPET
+I. CREATING NEW PRISM CODE SNIPPET
 
-1.) Click the COde Snippet icon in the CKEditor Toolbar. The Dialog window will now pop-up.
+1.) Click the Code Snippet icon in the CKEditor Toolbar. The Dialog window will now pop-up.
 2.) Select the language that will be the basis for the syntax highlighting.
 3.) Input the code snippets to be highlighted.
 4.) Click the OK button.
 
 
-II. EDITING EXISTING CODE SNIPPET
+II. EDITING EXISTING PRISM CODE SNIPPET
 
 Just double-click the target code snippet block and its dialog window will pop-up.
 This happens since a code snippet is implemented as a widget in which by default

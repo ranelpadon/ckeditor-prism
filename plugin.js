@@ -13,7 +13,7 @@
   // Create a new plugin which registers a custom code highlighter
   // based on Prism.js in order to replace the one that comes
   // with the Code Snippet plugin.
-  CKEDITOR.plugins.add('prismhighlighter', {
+  CKEDITOR.plugins.add('prism', {
     requires: 'codesnippet',
 
     init: function(editor) {

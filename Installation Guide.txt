@@ -15,27 +15,27 @@ d. Prism Highlighter plugin (http://ckeditor.com/addon/prism).
 For Linux users, after downloading, make sure that the zipped folders or the target CKEditor folders
 have right read/write/execute permissions, otherwise you might encounter loading issues
 like the "File x could not be found" notice. You might need to run "sudo chmod 777 -R lineutils",
-"sudo chmod 777 -R widget", "sudo chmod 777 -R codesnippet", and "sudo chmod 777 -R prismhighlighter",
+"sudo chmod 777 -R widget", "sudo chmod 777 -R codesnippet", and "sudo chmod 777 -R prism",
 before or after copying them in the appropriate CKEditor folders.
 
 
 II. STANDARD INSTALLATION (Usual Setup)
 
 1) After unzipping the folder, paste the 4 folders
-    ("lineutils", "widget", "codesnippet", and "prismhighlighter")
+    ("lineutils", "widget", "codesnippet", and "prism")
     to "ckeditor/plugins" folder. After that, you should have the following folder structures:
         "ckeditor/plugins/lineutils"
         "ckeditor/plugins/widget"
         "ckeditor/plugins/codesnippet"
-        "ckeditor/plugins/prismhighlighter"
+        "ckeditor/plugins/prism"
 
 2) Edit the "ckeditor/config.js" file, and add the following:
     if there's no existing line yet:
-        config.extraPlugins = "lineutils,widget,codesnippet,prismhighlighter";
+        config.extraPlugins = "lineutils,widget,codesnippet,prism";
 
     otherwise, append it to the existing list, no extra spaces are allowed:
         config.extraPlugins =
-            "existing_plugin,another_existing_plugin,lineutils,widget,codesnippet,prismhighlighter";
+            "existing_plugin,another_existing_plugin,lineutils,widget,codesnippet,prism";
 
 3.) Just to make sure, clear the web browser's cache after modifying your configuration.
     Clearing the browser's cache is also very important
@@ -90,7 +90,7 @@ A. DRUPAL INSTALLATION OPTION 1 (Easier Setup Than Option 2)
             "sites/all/modules/contrib/ckeditor/plugins".
 
         After that, you should have this folder structure:
-            "ckeditor/plugins/prismhighlighter"
+            "ckeditor/plugins/prism"
 
     2.) We should now activate the new plugin and add them to the toolbar.
         This is done by configuring the CKEditor Profile Settings,
@@ -102,7 +102,7 @@ A. DRUPAL INSTALLATION OPTION 1 (Easier Setup Than Option 2)
             Enable the corresponding checkboxes for the Code Snippet and Prism Highlighter.
             This is the text displayed adjacent to their checkboxes:
                 "Plugin for inserting Code Snippets ..."
-                "Plugin file: prismhighlighter"
+                "Plugin file: prism"
 
         B. Add the Code Snippet plugin to the Toolbar
             Prism Highlighter just overrides the highlighting engine (back-end)
@@ -157,17 +157,17 @@ B. DRUPAL INSTALLATION OPTION 2
             "sites/all/libraries/ckeditor/plugins"
 
         After that, you should have this folder structure:
-            "ckeditor/plugins/prismhighlighter"
+            "ckeditor/plugins/prism"
 
     2.) We should now activate the new plugin.
         This is done by implementing first the hook_ckeditor_plugin() in a custom module:
 
         function MYMODULE_ckeditor_plugin() {
           return array(
-            'prism_highlighter' => array(
-              'name' => 'leaflet',
+            'prism' => array(
+              'name' => 'prism',
               'desc' => t('Prism Highlighter Plugin'),
-              'path' => libraries_get_path('ckeditor') . '/plugins/prismhighlighter/',
+              'path' => libraries_get_path('ckeditor') . '/plugins/prism/',
             ),
           );
         }
