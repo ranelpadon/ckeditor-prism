@@ -86,11 +86,9 @@
           scala: 'Scala',
           scheme: 'Scheme',
           sql: 'SQL',
-          markup: 'SVG',
           swift: 'Swift',
           twig: 'Twig',
           vim: 'vim',
-          markup: 'XML',
           yaml: 'YAML',
         },
 
