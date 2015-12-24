@@ -24,8 +24,7 @@ Kindly refer to <a href="https://github.com/ranelpadon/ckeditor-prism/blob/maste
 
 <strong>LICENSE and CREDITS</strong>:<br>
 License: <a href="https://www.gnu.org/licenses/lgpl-2.1.txt">LGPLv2.1</a> or later should apply. Note that LGPLv2.1+ is also compatible with <a href="https://www.drupal.org/node/1475972#gplv2-compatible-licenses">GPLv2</a>.<br>
-Copyright 2015 by Engr. Ranel O. Padon<br>
-ranel.padon@gmail.com<br>
+Copyright 2015 by [Engr. Ranel O. Padon](http://www.ranelpadon.com)<br>
 
 Thanks to CKEditor, Prism, and other great open-source softwares and their unsung developers.<br>
 
