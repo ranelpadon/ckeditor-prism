@@ -14,13 +14,13 @@ This plugin utilizes the following libraries: <br>
 By default, Prism has no line numbering mechanism, so the **Line Number** add-on has been added. Also, in order for the line numbers to work smoothly in CKEditor and when rendering the actual page, I did some minor patching in **prism.js** and **prism.css**.
 
 <strong>LIVE DEMO PAGE</strong>:<br>
-Demo page could be found <a href="#">here</a>.
+Demo page could be found <a href="http://www.ranelpadon.com/sites/all/libraries/ckeditor/plugins/prismhighlighter/demo/index.html">here</a>.
 
 <strong>INSTALLATION</strong>:<br>
-Kindly refer to <a href="#">Installation Guide</a>.
+Kindly refer to <a href="https://github.com/ranelpadon/ckeditor-prism/blob/master/Installation%20Guide.txt">Installation Guide</a>.
 
 <strong>HOW TO USE</strong>:<br>
-Kindly refer to <a href="#">How to Create and Edit Prism Snippets</a>.
+Kindly refer to <a href="https://github.com/ranelpadon/ckeditor-prism/blob/master/Creating%20and%20Editing%20Code%20Snippets.txt">How to Create and Edit Prism Snippets</a>.
 
 <strong>LICENSE and CREDITS</strong>:<br>
 License: <a href="https://www.gnu.org/licenses/lgpl-2.1.txt">LGPLv2.1</a> or later should apply. Note that LGPLv2.1+ is also compatible with <a href="https://www.drupal.org/node/1475972#gplv2-compatible-licenses">GPLv2</a>.<br>
