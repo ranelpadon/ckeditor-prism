@@ -14,7 +14,7 @@ This plugin utilizes the following libraries: <br>
 By default, Prism has no line numbering mechanism, so the **Line Number** add-on has been added. Also, in order for the line numbers to work smoothly in CKEditor and when rendering the actual page, I did some minor patching in **prism.js** and **prism.css**.
 
 <strong>LIVE DEMO PAGE</strong>:<br>
-Demo page could be found <a href="http://www.ranelpadon.com/sites/all/libraries/ckeditor/plugins/prismhighlighter/demo/index.html">here</a>.
+Demo page could be found <a href="http://www.ranelpadon.com/sites/all/libraries/ckeditor/plugins/prism/demo/index.html">here</a>.
 
 <strong>INSTALLATION</strong>:<br>
 Kindly refer to <a href="https://github.com/ranelpadon/ckeditor-prism/blob/master/Installation%20Guide.txt">Installation Guide</a>.
