@@ -18,6 +18,8 @@ like the "File x could not be found" notice. You might need to run "sudo chmod 7
 "sudo chmod 777 -R widget", "sudo chmod 777 -R codesnippet", and "sudo chmod 777 -R prism",
 before or after copying them in the appropriate CKEditor folders.
 
+After the installation (Part 2 for Non-Drupal, Part 3 for Drupal), read the important notes in part 4 also to avoid surprises.
+
 
 II. STANDARD INSTALLATION (Usual Setup)
 
@@ -206,3 +208,56 @@ B. DRUPAL INSTALLATION OPTION 2
         clear the browser's cache. Clearing the browser's cache is also
         very important since the CKEditor's JS and CSS assets/components
         are cached also in the browser.
+
+
+IV. IMPORTANT NOTES
+
+    A. HTML (SECURITY) FILTERING ISSUES
+
+    Code Snippet/Prism Syntax Highlighter inserts <PRE><CODE>...</CODE></PRE> tags/blocks
+    in your webpages. The <PRE><CODE> is one of the main basis for the styling/syntax highlighting.
+    Yet, for some systems like Drupal, <PRE> tag is blacklisted by default
+    when filtering/rendering page contents (actually <pre><code> will become <p><code> when rendered).
+    In Drupal, <CODE> is allowed by default. Hence, you must allow/whitelist <PRE> tag in order for the syntax highlighter to work as intended. In Drupal, you should add the "<pre>"" tag
+    as one of the whitelisted tags in the
+        'Allowed HTML tags' section in 'Limit allowed HTML tags' filter/tab in
+            "admin/config/content/formats/filtered_html" page.
+
+    B. VIEWING THE PAGE
+
+    This syntax highlighter utilizes the Prism JS/CSS files in order to work as intended.
+
+    Typically, there are 2 view modes for every page in CMS: CKEditor Mode and Page Mode.
+    In CKEditor Mode (when editing the page), the Prism Highlighter handles the auto-loading
+    of Prism JS and CSS files. In Page Mode (when rendering/viewing the actual page),
+    Prism Highlighiter is not loaded anymore (since it depends on CKEditor.)
+
+    In effect, you have to load the Prism JS and CSS files when displaying the page.
+    You should add these link and script tags in your HTML <head>:
+        <head>
+            ...
+            <link href="PATH_TO/prism_patched.min.css" rel="stylesheet">
+
+            <script src="PATH_TO/prism_patched.min.js"></script>
+        </head>
+
+    For example, in my personal site I have these values:
+        <head>
+            ...
+            <link href=" http://ranelpadon.com/sites/all/libraries/ckeditor/plugins/prism/lib/prism/prism_patched.min.css" rel="stylesheet">
+
+            <script src=" http://ranelpadon.com/sites/all/libraries/ckeditor/plugins/prism/lib/prism/prism_patched.min.js"></script>
+        </head>
+
+    Note that even if you're not using Prism Syntax Highlighter, and just using
+    the Code Snippet plugin, you'll have to do the same steps:
+        http://docs.ckeditor.com/#!/guide/dev_codesnippet.
+
+    In Drupal, you could easily add the script using JS Injector module
+        https://www.drupal.org/project/js_injector
+
+    and for adding the stylesheet, you could use the CSS Injector module
+        https://www.drupal.org/project/css_injector
+
+    If you're a Drupal developer, you could do the JS/CSS insertions using the
+        drupal_add_js() and drupal_add_css() functions in a custom module.
